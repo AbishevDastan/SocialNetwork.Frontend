@@ -16,12 +16,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PostsFeedComponent } from './components/shared/posts-feed/posts-feed.component';
 import { PostComponent } from './components/shared/post/post.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchResultsComponent } from './components/pages/search-results/search-results.component';
+import { UsersListComponent } from './components/shared/users-list/users-list.component';
+import { UserShortInfoComponent } from './components/shared/user-short-info/user-short-info.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registration', component: RegistrationComponent },
+  { path: 'search-results', component: SearchResultsComponent }
 ];
 
 const AUTHENTICATION_INTERCEPTOR = {
@@ -38,7 +42,10 @@ const AUTHENTICATION_INTERCEPTOR = {
     RegistrationComponent,
     HeaderComponent,
     PostsFeedComponent,
-    PostComponent
+    PostComponent,
+    SearchResultsComponent,
+    UsersListComponent,
+    UserShortInfoComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,8 @@ import { RegisterUser } from '../models/user/register-user';
 import { environment } from 'src/environments/environment.development';
 import { TokenModel } from '../models/user/token-model';
 import { tap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { User } from '../models/user/user';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +18,10 @@ export class UserService {
   constructor(private httpClient: HttpClient,
       private userProvider: UserProvider) { }
 
+  getUsers() : Observable<Array<User>> {
+    return this.httpClient.get<Array<User>>(`${environment.apiUrl}/${this.url}`);
+  }
+
   register(email: string, name: string, surname: string, password: string, confirmPassword: string) {
     return this.httpClient.post<RegisterUser>(`${environment.apiUrl}/${this.url}/register`, {
       email,
@@ -24,6 +30,10 @@ export class UserService {
       password,
       confirmPassword
     });
+  }
+
+  searchUsers(searchText: string) : Observable<Array<User>> {
+    return this.httpClient.get<Array<User>>(`${environment.apiUrl}/${this.url}/${searchText}/search`)
   }
 
   private static setToken(tokenModel: TokenModel | null): void {

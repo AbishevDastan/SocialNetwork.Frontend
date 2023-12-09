@@ -1,0 +1,13 @@
+.user {
+    padding: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    background-color: rgba(59, 59, 59, 0.945);
+    color: white;
+    border-radius: 10px;
+}
+
+.user-email {
+    opacity: 0.5;
+}

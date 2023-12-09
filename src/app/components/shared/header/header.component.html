@@ -5,7 +5,11 @@
         <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
           <a routerLink="">Home</a>
         </li>
-        
+
+        <form (submit)="searchUsers()">
+          <input type="text" [(ngModel)]="searchText" name="searchText" placeholder="Search...">
+          <button type="submit">Search</button>
+        </form>
         <li class="nav-item">
           <a *ngIf="isAuthenticated" (click)="logout()">Logout</a>
         </li>
