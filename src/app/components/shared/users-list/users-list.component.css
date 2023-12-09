@@ -1,17 +1,4 @@
 .container {
     padding: 5%;
-    background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
-
-/* .add-post-form-container {
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 3%;
-} */
-
-/* .add-post-form-container form {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-} */
