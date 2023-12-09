@@ -4,6 +4,7 @@ import { Post } from '../models/post/post';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
 import { AddPostDto } from '../models/post/add-post-dto';
+import { UpdatePostDto } from '../models/post/update-post-dto';
 
 @Injectable({
   providedIn: 'root'
@@ -30,8 +31,8 @@ export class PostService {
     return this.http.post<Post>(`${environment.apiUrl}/${this.url}`, addPost);
   }
 
-  updatePost(post: Post): Observable<Post> {
-    return this.http.put<Post>(`${environment.apiUrl}/${this.url}`, post);
+  updatePost(updatePost: UpdatePostDto, postId?: number): Observable<Post> {
+    return this.http.put<Post>(`${environment.apiUrl}/${this.url}/${postId}`, updatePost);
   }
 
   deletePost(postId?: number): Observable<void> {

@@ -15,6 +15,8 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PostsFeedComponent } from './components/shared/posts-feed/posts-feed.component';
 import { PostComponent } from './components/shared/post/post.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -45,7 +47,8 @@ const AUTHENTICATION_INTERCEPTOR = {
     HttpClientModule,
     CommonModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [
     AUTHENTICATION_INTERCEPTOR,

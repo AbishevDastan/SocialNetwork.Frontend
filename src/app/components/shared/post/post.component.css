@@ -8,6 +8,12 @@
     border-radius: 10px;
 }
 
+.post-info {
+    display: flex;
+    flex-direction: row;
+    gap: 800px;
+}
+
 .post-date {
     opacity: 0.5;
 }

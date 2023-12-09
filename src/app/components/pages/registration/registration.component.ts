@@ -9,6 +9,8 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class RegistrationComponent {
   newEmail: string = '';
+  name: string = '';
+  surname: string = '';
   newPassword: string = '';
   confirmNewPassword: string = '';
 
@@ -24,11 +26,11 @@ export class RegistrationComponent {
     this.errorMessage = '';
     this.error = '';
     
-    this.userService.register(this.newEmail, this.newPassword, this.confirmNewPassword)
+    this.userService.register(this.newEmail, this.name, this.surname, this.newPassword, this.confirmNewPassword)
         .subscribe
         ((res: any) => {
               if(res){
-                this.router.navigate(['/']).then();
+                this.goToLogin();
                 this.errorMessage = '';
                 this.successMessage = res.message;
               } else {

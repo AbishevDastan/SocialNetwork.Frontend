@@ -1,24 +1,32 @@
 <div class="page-container">
     <div class="container">
             <div class="form-title">
-            <h2>Регистрация</h2>
+            <h2>Registration</h2>
         </div>
         <form>
             <div class="mb-3">
-              <label for="newEmail" class="form-label">Адрес эл. почты</label>
-              <input type="email" class="form-control" id="newEmail" name="newEmail" placeholder="Введите свой адрес эл. почты" [(ngModel)]="newEmail">
+              <label for="newEmail" class="form-label">E-mail address</label>
+              <input type="email" class="form-control" id="newEmail" name="newEmail" placeholder="Enter your e-mail address" [(ngModel)]="newEmail">
             </div>
             <div class="mb-3">
-              <label for="registerPassword" class="form-label">Пароль</label>
-              <input type="password" class="form-control" id="newPassword" name="newPassword" placeholder="Введите пароль" [(ngModel)]="newPassword">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" [(ngModel)]="name">
             </div>
             <div class="mb-3">
-              <label for="registerPassword" class="form-label">Пароль</label>
-              <input type="password" class="form-control" id="confirmNewPassword" name="confirmNewPassword" placeholder="Подтвердите пароль" [(ngModel)]="confirmNewPassword">
+              <label for="surname" class="form-label">Surname</label>
+              <input type="text" class="form-control" id="surname" name="surname" placeholder="Enter your surname" [(ngModel)]="surname">
+            </div>
+            <div class="mb-3">
+              <label for="registerPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="newPassword" name="newPassword" placeholder="Enter your password" [(ngModel)]="newPassword">
+            </div>
+            <div class="mb-3">
+              <label for="registerPassword" class="form-label">Confirm password</label>
+              <input type="password" class="form-control" id="confirmNewPassword" name="confirmNewPassword" placeholder="Confirm your password" [(ngModel)]="confirmNewPassword">
             </div>
               <div class="button-container">
-              <button type="submit" class="btn btn-outline-dark" (click)="createAccount()" [disabled]="!newEmail || !newPassword || !confirmNewPassword">Создать аккаунт</button>
-              <a (click)="goToLogin()"><p>У меня уже есть учётная запись</p></a>
+              <button type="submit" class="btn btn-outline-dark" (click)="createAccount()" [disabled]="!newEmail || !newPassword || !confirmNewPassword">Create account</button>
+              <a (click)="goToLogin()"><p>I already have an account</p></a>
             </div>
             </form>
           </div>

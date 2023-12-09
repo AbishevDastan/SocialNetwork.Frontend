@@ -4,6 +4,9 @@
       <div class="post-info">
         <!-- <h6 class="post-author">John Doe</h6> -->
         <p class="post-date">{{ post?.creationDate| date:'medium' }}</p>
+        <!-- <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#update-post-modal">
+            <i class="bi bi-pencil-fill"></i>
+        </button> -->
       </div>
     </div>
     <p class="post-content">{{ post?.content }}</p>
@@ -12,3 +15,28 @@
       <button class="btn btn-sm btn-link">Comment</button>
     </div> -->
   </div>
+<!-- 
+  <div class="modal fade" id="update-post-modal" tabindex="-1" aria-labelledby="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit post</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form (ngSubmit)="onUpdatePostSubmit()">
+            <input type="hidden" [(ngModel)]="updatedPostId" name="updateId">
+            <div class="mb-3">
+              <label for="content" class="form-label">Content</label>
+              <input [(ngModel)]="updatedPostContent" type="text" name ="content" class="form-control" id="content" placeholder="Change the post's content" required>
+            </div>
+            <div class="button-container">
+              <button type="submit" class="btn btn-outline-dark" data-bs-dismiss="modal">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> -->

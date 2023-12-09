@@ -16,9 +16,11 @@ export class UserService {
   constructor(private httpClient: HttpClient,
       private userProvider: UserProvider) { }
 
-  register(email: string, password: string, confirmPassword: string) {
+  register(email: string, name: string, surname: string, password: string, confirmPassword: string) {
     return this.httpClient.post<RegisterUser>(`${environment.apiUrl}/${this.url}/register`, {
       email,
+      name,
+      surname,
       password,
       confirmPassword
     });
