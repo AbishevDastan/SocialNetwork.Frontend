@@ -10,10 +10,16 @@
       </div>
     </div>
     <p class="post-content">{{ post?.content }}</p>
-    <!-- <div class="post-actions">
+    <div class="post-actions">
       <button class="btn btn-sm btn-primary">Like</button>
+      <div class="reactions">
+        <button class="reaction-btn" (click)="react('like')">👍</button>
+        <button class="reaction-btn" (click)="react('love')">❤️</button>
+        <button class="reaction-btn" (click)="react('haha')">😄</button>
+        <!-- Add more reaction buttons as needed -->
+      </div>
       <button class="btn btn-sm btn-link">Comment</button>
-    </div> -->
+    </div>
   </div>
 <!-- 
   <div class="modal fade" id="update-post-modal" tabindex="-1" aria-labelledby="dialog" aria-hidden="true">

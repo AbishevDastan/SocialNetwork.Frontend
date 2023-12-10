@@ -10,7 +10,7 @@ import { RegistrationComponent } from './components/pages/registration/registrat
 import { AuthenticationInterceptor } from './interceptors/auth.interceptor';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PostsFeedComponent } from './components/shared/posts-feed/posts-feed.component';
@@ -59,6 +59,7 @@ const AUTHENTICATION_INTERCEPTOR = {
     HttpClientModule,
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     NgbModule,
     BrowserAnimationsModule
   ],

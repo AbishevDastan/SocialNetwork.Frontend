@@ -17,3 +17,21 @@
 .post-date {
     opacity: 0.5;
 }
+
+
+.reactions {
+    display: flex;
+  }
+  
+  .reaction-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  /* Style the button differently when it's selected */
+  .reaction-btn.selected {
+    color: blue;
+  }

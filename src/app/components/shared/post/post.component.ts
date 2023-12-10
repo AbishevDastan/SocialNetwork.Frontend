@@ -41,4 +41,14 @@ export class PostComponent {
   //     }
   //   );
   // }
+
+  selectedReaction: string | null = null;
+
+  react(reaction: string): void {
+    if (this.selectedReaction === reaction) {
+      this.selectedReaction = null;
+    } else {
+      this.selectedReaction = reaction;
+    }
+  }
 }

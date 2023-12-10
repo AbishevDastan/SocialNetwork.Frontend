@@ -1,13 +1,13 @@
-    <div class="container">
-        <div class="add-post-form-container">
-            <form (ngSubmit)="onAddPostSubmit()">
-                <input [(ngModel)]="addPostDto.content" type="text" name ="content" class="form-control" id="content" placeholder="What's on your mind?" required>
-                <button type="submit" class="btn btn-outline-dark">Post</button>
-            </form>
-        </div>
-        <div class="posts-feed-container">
-            <div *ngFor="let post of posts">
-                <app-post [post]="post"></app-post>
-            </div>
+<div class="container">
+    <div class="add-post-form-container">
+        <form #addPostForm="ngForm" (ngSubmit)="onAddPostSubmit();">
+                    <input [(ngModel)]="addPostDto.content" type="text" name ="content" class="form-control" id="content" placeholder="What's on your mind?" required>
+                    <button type="submit" class="btn btn-outline-dark" [disabled]="addPostForm.invalid">Post</button>
+        </form>
+    </div>
+    <div class="posts-feed-container">
+        <div *ngFor="let post of posts">
+            <app-post [post]="post"></app-post>
         </div>
     </div>
+</div>
