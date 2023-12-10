@@ -5,7 +5,9 @@
         <li class="nav-item">
           <form (submit)="searchUsers()">
             <input type="text" [(ngModel)]="searchText" name="searchText" placeholder="Search...">
-            <button type="submit">Search</button>
+            <button class="search-button" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
           </form>
         </li>
             <li class="nav-item">

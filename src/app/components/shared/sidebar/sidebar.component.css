@@ -1,0 +1,30 @@
+.sidebar {
+    margin-top: 65px;
+    margin-left: 130px;
+    width: 150px;
+  }
+  
+  .sidebar a {
+    color: black;
+    text-decoration: none;
+    opacity: 0.5;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.1s ease-in-out;
+  }
+  
+  .sidebar a:hover {
+
+    background-color: rgb(239, 239, 239);
+    cursor: pointer;
+    opacity: 1; 
+ }
+  
+  .active {
+    opacity: 1;
+    font-weight: 400;
+  }
+  
+  .nav-link i {
+    padding-right: 6px;
+  }

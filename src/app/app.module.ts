@@ -19,13 +19,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchResultsComponent } from './components/pages/search-results/search-results.component';
 import { UsersListComponent } from './components/shared/users-list/users-list.component';
 import { UserShortInfoComponent } from './components/shared/user-short-info/user-short-info.component';
+import { UserProfileComponent } from './components/pages/user-profile/user-profile.component';
+import { SidebarComponent } from './components/shared/sidebar/sidebar.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registration', component: RegistrationComponent },
-  { path: 'search-results', component: SearchResultsComponent }
+  { path: 'search-results', component: SearchResultsComponent },
+  { path: 'user-profile', component: UserProfileComponent }
 ];
 
 const AUTHENTICATION_INTERCEPTOR = {
@@ -45,7 +48,9 @@ const AUTHENTICATION_INTERCEPTOR = {
     PostComponent,
     SearchResultsComponent,
     UsersListComponent,
-    UserShortInfoComponent
+    UserShortInfoComponent,
+    UserProfileComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

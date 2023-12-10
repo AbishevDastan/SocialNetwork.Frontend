@@ -23,6 +23,10 @@ export class PostService {
     return this.http.get<Post>(`${environment.apiUrl}/${this.url}/${postId}`);
   }
 
+  getPostsByUserId(userId?: number) : Observable<Array<Post>> {
+    return this.http.get<Array<Post>>(`${environment.apiUrl}/${this.url}/${userId}/posts-by-user-id`);
+  }
+
   // searchPosts(searchText: string) : Observable<Array<Post>> {
   //   return this.http.get<Array<Post>>(`${environment.apiUrl}/${this.url}/${searchText}/search`);
   // }
